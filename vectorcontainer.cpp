@@ -1,8 +1,7 @@
-#include "vectorcontainer.hpp"
+#ifndef __VECTOR_CONTAINER_CPP__
+#define __VECTOR_CONTAINER_CPP__
 
-void VectorContainer::set_sort_function(Sort* sort_function) {
-	this->sort_function = sort_function;
-}
+#include "vectorcontainer.hpp"
 
 void VectorContainer::add_element(Base* element) {
 	vectorContainer.push_back(element);
@@ -10,7 +9,7 @@ void VectorContainer::add_element(Base* element) {
 
 void VectorContainer::print() {
 	for(unsigned int i = 0; i < vectorContainer.size(); i++) {
-		vectorContainer.at(i).stringify();
+		vectorContainer.at(i)->stringify();
 	}
 }
 
@@ -35,3 +34,5 @@ Base* VectorContainer::at(int i) {
 int VectorContainer:: size() {
 	return vectorContainer.size();
 }
+
+#endif

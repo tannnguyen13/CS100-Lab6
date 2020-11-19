@@ -9,7 +9,7 @@
 #include "div.hpp"
 #include "pow.hpp"
 #include "mult.hpp"
-#include "tonainer.hpp"
+#include "container.hpp"
 #include "vectorcontainer.cpp"
 #include "bubblesort.hpp"
 
@@ -45,7 +45,7 @@ TEST(VectorTest, PrintTest) {
 	test->add_element(add);
 
 	ASSERT_EQ(test->size(), 1);
-	EXPECT_EQ(test->print(), "1 + 2");
+	EXPECT_EQ(test->at(0)->stringify(), "1.0 + 2.0");
 }
 
 TEST(VectorTest, SwapTest) {
@@ -78,7 +78,7 @@ TEST(SortTestSet, BubbleSortTest) {
 
 	Op* ten = new Op(10);
 	Op* five = new Op(5);
-	Div* Tree3 = new Mult(10, 5);
+	Div* Tree3 = new Div(ten, five);
 
 	VectorContainer* test = new VectorContainer();
 	test->add_element(Tree1);
@@ -96,5 +96,7 @@ TEST(SortTestSet, BubbleSortTest) {
 	ASSERT_EQ(test->size(),3);
 	EXPECT_EQ(test->at(0)->evaluate(),2);
 	EXPECT_EQ(test->at(1)->evaluate(),12);
-	EXPECT_EQ(test->at(2)->evlaute(),14);
+	EXPECT_EQ(test->at(2)->evaluate(),14);
 }
+
+#endif 

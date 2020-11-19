@@ -13,8 +13,8 @@ class BubbleSort : public Sort {
 			Base* temp;
 			for(unsigned int i = 1; i <= container->size();i++) {
 				flag = 0;
-				for(unsigned int j = 0; j < container->size();j++) {
-					if(container->at(j+1)->evaluate() > container->at(j)->evaluate()) {
+				for(unsigned int j = 0; j < container->size()-1;j++) {
+					if(container->at(j+1)->evaluate() < container->at(j)->evaluate()) {
 						container->swap(j+1,j);
 					}
 				}

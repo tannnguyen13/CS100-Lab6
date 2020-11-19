@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 
+#include "sort.hpp"
 #include "ListContainerTest.hpp"
 #include "SelectionSortTest.hpp"
 #include "vectortest.hpp"

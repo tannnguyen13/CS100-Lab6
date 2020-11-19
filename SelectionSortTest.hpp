@@ -3,7 +3,7 @@
 
 #include "gtest/gtest.h"
 #include "SelectionSort.hpp"
-#include "VectorContainer.hpp"
+#include "vectorcontainer.cpp"
 #include "ListContainer.hpp"
 #include "add.hpp"
 #include "op.hpp"
@@ -22,7 +22,7 @@ TEST(SortTestSet, SelectionSortTest) {
     Add* TreeB = new Add(three, two);
 
     Op* ten = new Op(10);
-    Ope* six = new Op(6);
+    Op* six = new Op(6);
     Sub* TreeC = new Sub(ten, six);
 
     VectorContainer* container = new VectorContainer();
@@ -54,7 +54,7 @@ TEST(SortTestSet, SelectionSortTestNeg) {
     Add* TreeB = new Add(three, two);
 
     Op* ten = new Op(-10);
-    Ope* six = new Op(-6);
+    Op* six = new Op(-6);
     Sub* TreeC = new Sub(ten, six);
 
     VectorContainer* container = new VectorContainer();
@@ -86,7 +86,7 @@ TEST(SortTestSet, SelectionSortTestZero) {
     Add* TreeB = new Add(three, two);
 
     Op* ten = new Op(10);
-    Ope* six = new Op(6);
+    Op* six = new Op(6);
     Sub* TreeC = new Sub(ten, six);
 
     VectorContainer* container = new VectorContainer();

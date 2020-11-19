@@ -13,15 +13,12 @@ class VectorContainer : public Container
 	private:
 		vector <Base*> vectorContainer;
 	public:
-		VectorContainer() : Container() { sort_function = nullptr };
-		VectorContainer(Sort* function) : Container() { sort_function = function};
-		void set_sort_function(Sort* sort_function);
-		virtual void add_element(Base* element) = 0;
-		virtual void print() = 0;
-		virtual void sort() = 0;
-		virtual void swap(int i, int j) = 0;
-		virtual Base* at(int j) = 0;
-		virtual int size() = 0;
+		void add_element(Base* element);
+		void print();
+		void sort();
+		void swap(int i, int j);
+		Base* at(int j);
+		int size();
 };
 
 #endif //__VECTOR_CONTAINER_HPP__
