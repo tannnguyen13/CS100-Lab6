@@ -23,8 +23,9 @@ class ListContainer : public Container {
 			list<Base*>::iterator iter;
 			for( iter = myList.begin(); iter != myList.end(); iter++) {
 				Base* temp = *iter;
-				temp->stringify();
-			}	
+				cout << temp->stringify() << ", ";	
+			}
+			cout << endl;	
 		}
 		void sort() {
 			if(sort_function == nullptr)

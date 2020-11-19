@@ -7,6 +7,8 @@
 #include "base.hpp"
 #include <algorithm>
 #include <vector>
+#include <iostream>
+using namespace std;
 
 class VectorContainer : public Container
 {

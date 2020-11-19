@@ -9,8 +9,9 @@ void VectorContainer::add_element(Base* element) {
 
 void VectorContainer::print() {
 	for(unsigned int i = 0; i < vectorContainer.size(); i++) {
-		vectorContainer.at(i)->stringify();
+		cout << vectorContainer.at(i)->stringify() << ", ";
 	}
+	cout << endl;
 }
 
 void VectorContainer::sort() {
