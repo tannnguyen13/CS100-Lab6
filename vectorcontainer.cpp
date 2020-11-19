@@ -4,7 +4,7 @@ void VectorContainer::set_sort_function(Sort* sort_function) {
 	this->sort_function = sort_function;
 }
 
-void VectorContainer::add_elemt(Base* element) {
+void VectorContainer::add_element(Base* element) {
 	vectorContainer.push_back(element);
 }
 
